@@ -121,27 +121,6 @@ public class GameTest {
 
     }
 
-    /*@Test
-    public void PlayerOneWinWithAdvantage(){
-        Player playerOne = new Player("Leo");
-        Player playerTwo = new Player("Roger");
-
-        Game game = new Game(playerOne,playerTwo);
-        game.setScoreOfPlayerOne(); // player One score: 15 -0
-        game.setScoreOfPlayerOne(); // player one score again: 30-0
-        game.setScoreOfPlayerTwo(); // player two score: 30-15
-        game.setScoreOfPlayerOne(); // player One score again : 40-15
-        game.setScoreOfPlayerTwo(); // player one score again: 40-30
-        game.setScoreOfPlayerTwo(); // player one score again: 40 -40
-        game.setScoreOfPlayerOne(); // player one score again: 40-40 with Avantage status
-        game.setScoreOfPlayerOne(); // player one score again: 40-40 with Avantage status
-
-        Assert.assertEquals("40-40", game.getCurrentGameScore());
-        Assert.assertEquals("ADVANTAGE", game.getStatus());
-        Assert.assertEquals(true, playerOne.isAvantage());
-        Assert.assertEquals("Leo",game.getWinner());
-
-    }*/
 
 
 }
