@@ -2,22 +2,22 @@ import org.junit.Assert;
 import org.junit.Test;
 
 
-class PlayerTest {
+public class PlayerTest {
     Player player = new Player("Leo");
 
     @Test
-    void createPLayerAndGetHerName() {
+    public void createPLayerAndGetHerName() {
         Assert.assertEquals("Leo", player.getName());
     }
 
     @Test
-    void createPLayerWithOneScoreGameAndGetCurrentScore() {
+    public void createPLayerWithOneScoreGameAndGetCurrentScore() {
         player.setScore();
         Assert.assertEquals(15, player.getCurrentScore());
     }
 
     @Test
-    void createPLayerWithHighScore() {
+    public void createPLayerWithHighScore() {
         player.setScore();
         player.setScore();
         player.setScore();
@@ -27,7 +27,7 @@ class PlayerTest {
     }
 
     @Test
-    void createPLayerWithAvantage() {
+    public void createPLayerWithAvantage() {
         player.setAvantage(true);
         Assert.assertEquals(true, player.isAvantage());
     }

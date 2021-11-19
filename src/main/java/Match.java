@@ -31,10 +31,10 @@ public class Match {
 
     @Override
     public String toString() {
-        return " Player1" + this.playerOne.getName() +
-                " \n Player2 " + this.playerTwo.getName() +
-                " \n Score: " + printMatchSocres()+
-                "\n Current game status: "+ listSets.get(listSets.size()-1).getCurrentGame();
+        return " Player1 " + this.playerOne.getName() +
+                " \n  Player2 " + this.playerTwo.getName() +
+                " \n  Score: " + printMatchSocres()+
+                "\n  Current game status: "+ listSets.get(listSets.size()-1).getCurrentGame();
 
     }
 }

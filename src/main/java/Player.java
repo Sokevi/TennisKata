@@ -41,4 +41,8 @@ public class Player {
 
     }
 
+    public void resetScore(){
+        this.currentScore =0;
+    }
+
 }

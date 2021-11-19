@@ -24,7 +24,12 @@ public class Game {
     }
 
     public String getStatus() {
-        return this.status;
+        if((playerOne.getCurrentScore() == FORTY_SCORE && playerTwo.getCurrentScore() == FORTY_SCORE)){
+            return this.status;
+        }else{
+            return this.getCurrentGameScore();
+        }
+
     }
 
     public void setScoreOfPlayerOne() {
@@ -62,10 +67,10 @@ public class Game {
         if (localStatus != null) this.status = localStatus;
 
 
-        System.out.println(playerTwo.isAvantage());
-        System.out.println(this.getCurrentGameScore());
-        System.out.println(this.getStatus());
-        System.out.println("--------------");
+
+        System.out.print(this.getStatus()+" ");
+
+
 
     }
 
@@ -105,9 +110,9 @@ public class Game {
         if (localStatus != null)
             this.status = localStatus;
 
-        System.out.println(this.getCurrentGameScore());
-        System.out.println(this.getStatus());
-        System.out.println("--------------");
+        System.out.print(this.getStatus());
+
+
     }
 
     public boolean isFinish() {
@@ -117,7 +122,7 @@ public class Game {
 
 
     public String getCurrentGameScore() {
-        return playerOne.getCurrentScore() + "-" + playerTwo.getCurrentScore();
+        return "("+playerOne.getCurrentScore() + "-" + playerTwo.getCurrentScore()+")";
     }
 
 

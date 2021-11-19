@@ -32,21 +32,26 @@ public class Set {
 
     public void addGame(@NotNull Game game) {
 
-        this.currentGame =game;
-        if (game.getWinner().equals(playerOne.getName())) {
-            playerOneScore++;
-        }
-        if (game.getWinner().equals(playerTwo.getName())) {
-            playerTwoScore++;
-        }
+        if(!isFinish()){
+            this.currentGame =game;
+            if (game.getWinner().equals(playerOne.getName())) {
+                playerOneScore++;
+            }
+            if (game.getWinner().equals(playerTwo.getName())) {
+                playerTwoScore++;
+            }
+        };
+
+
 
 
     }
 
     public boolean isFinish() {
 
-        if (playerOneScore >= 6 && playerTwoScore >= 6) {
-            if (playerOneScore - playerTwoScore == 2 || playerTwoScore - playerOneScore == 2) {
+        if ( playerOneScore >=6 || playerTwoScore >= 6) {
+
+            if (playerOneScore - playerTwoScore >=2 || playerTwoScore - playerOneScore >= 2) {
                 this.isFinish = true;
             }
         }
@@ -64,5 +69,11 @@ public class Set {
 
     public int getPlayerTwoScore() {
         return playerTwoScore;
+    }
+
+    public void ressetSet(){
+        this.playerOneScore= 0;
+        this.playerTwoScore =0;
+        this.isFinish = false;
     }
 }

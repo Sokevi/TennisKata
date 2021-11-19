@@ -72,6 +72,12 @@ public class SetTest {
         game6.setScoreOfPlayerTwo();// player Two win
         set.addGame(game6);
 
+        Game game7 = new Game(player1, player2);
+        game7.setScoreOfPlayerTwo();//0-15
+        game7.setScoreOfPlayerTwo();//0-30
+        game7.setScoreOfPlayerTwo();//0-40
+        game7.setScoreOfPlayerTwo();// player Two win
+        set.addGame(game7);
 
         Assert.assertEquals("(0-6)", set.getScore());
 
